@@ -8,6 +8,8 @@ public class Main {
 
         FileOutputStream outputStream = new FileOutputStream("50k_descending.txt");
         int fileSize = 50000;
+        // create new output stream and name the txt file
+        // integer fileSize is the number of integer in the file
 
         // random
             /*for (int i = 0; i < fileSize; i++) {
@@ -22,7 +24,7 @@ public class Main {
             }*/
 
         // Descending
-        for (int i = fileSize; i > 0; i--) {
+        for (int i = fileSize-1; i >= 0; i--) {
             byte[] strToBytes = (String.valueOf(i) + " ").getBytes();
             outputStream.write(strToBytes);
         }
